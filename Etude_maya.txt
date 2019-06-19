@@ -1,3 +1,8 @@
+Date: Tue 19 Jan 2019 14:00:00 CEST
+Author: Nicolas Flandrois
+Description: Research and Notes
+=================================
+
 Comment créer un générateur de date Maya Long Count?
 Le calendrier Maya fonctionne sur un système numérique de base 20.
 

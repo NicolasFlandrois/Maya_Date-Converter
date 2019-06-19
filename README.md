@@ -1,5 +1,6 @@
 # maya_date
-Python script to compute, convert, and translate dates into Mayan Calendar Long Count date.
+## Python script to compute, convert, and translate dates into Mayan Calendar Long Count date.
+==============
 
 Mayan Calendar Project :
 	Generate of Mayan Long Count Calendar according to current time. Changing reference date.
