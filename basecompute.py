@@ -23,9 +23,9 @@ class Base(object):
 		return a # , b # Returns a Tuple (a, b)
 
 #TEST
-print("base10toN")
-print("Base 20: ", Base.base10toN(50, 20))
-print("Base 18: ", Base.base10toN(50, 18))
-print("baseNto10")
-print("Base 20: ", Base.baseNto10(60, 20))
-print("Base 18: ", Base.baseNto10(40, 18))
+# print("base10toN")
+# print("Base 20: ", Base.base10toN(50, 20))
+# print("Base 18: ", Base.base10toN(50, 18))
+# print("baseNto10")
+# print("Base 20: ", Base.baseNto10(60, 20))
+# print("Base 18: ", Base.baseNto10(40, 18))

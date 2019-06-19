@@ -30,10 +30,10 @@ class Convert(object):
 		return ref_b + delta.days
 
 # Test
-print("Computing Today's date Automaticaly")
-print("Auto Dating Now: ", Convert.nowdate())
-print("Converting the date: ", Convert.convertor(Convert.nowdate()))
-print("Computing an Input Date")
-print("Formating the date : ", Convert.inputdate(1970, 7, 2))
-print("Converting the date : ", Convert.convertor(
-	  Convert.inputdate(1970, 7, 2)))
+# print("Computing Today's date Automaticaly")
+# print("Auto Dating Now: ", Convert.nowdate())
+# print("Converting the date: ", Convert.convertor(Convert.nowdate()))
+# print("Computing an Input Date")
+# print("Formating the date : ", Convert.inputdate(1970, 7, 2))
+# print("Converting the date : ", Convert.convertor(
+# 	  Convert.inputdate(1970, 7, 2)))
