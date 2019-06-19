@@ -54,5 +54,8 @@ print(f'{kinchiltun}.{kalabtun}.{piktun}.{baktun}.{katun}.{tun}.{winal}.\
 # [ ] Translating the Mayan Date Back into a date
 # [ ] Managing the convertions into 2 commands:
 #                [ ] Auto Converting Today's date into a Mayan Long Count.
+#						> automayalc() function
 #                [ ] Converting a Manually input date into Mayan LC.
+#						> convertmayalc() function
 #                [ ] Translating a Manually input Mayan LC into a data.
+#						> translatemayalc() function
