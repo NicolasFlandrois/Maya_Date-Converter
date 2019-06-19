@@ -1,3 +1,8 @@
+#!usr/bin/python3.7
+# UTF8
+# Date: Wed 19 Jun 2019 15:28:22 CEST
+# Author: Nicolas Flandrois
+
 class Base(object):
 	"""Base class group functions to compute a number from base 10
 	to n-base. As needed for a Mayan Long Count, the output will still be
