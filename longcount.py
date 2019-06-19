@@ -52,3 +52,20 @@ print(f'{kinchiltun}.{kalabtun}.{piktun}.{baktun}.{katun}.{tun}.{winal}.\
 # Issue in Computing
 # This version hives the Output: 0.0.0.14.8.19.8.11
 # The normal convertion into Mayan Long Count, should be: 0.0.0.13.0.6.10.11
+
+# 9.12.2.0.16 (Long Count)
+# 	9	× 144000	= 1296000
+# 	12	× 7200	= 86400
+# 	2	× 360	= 720
+# 	0	× 20	= 0
+# 	16	× 1	= 16
+# 	Total days	= 1383136
+
+# 0.0.0.13.0.6.10.11 = 1874371 days
+# 0.0.0.14.8.19.8.11 = 2080611 days
+# Delta = 206240 days
+# The Error came from the reference date conversion that was 
+# not properly calculated initially.
+# Initial Ref convertion was: 2062545
+# However it should have been: 1856305
+# Correcting this mistake solved the issue.

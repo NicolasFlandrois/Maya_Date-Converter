@@ -13,8 +13,8 @@ class Base(object):
 		a = n_input//n_base
 		b = n_input%n_base
 		return a, b 
-		# Returns a Tuple (a, b) ('a' will be compute for the next digit, 
-		# 'b' is the reminder)
+		# Returns a Tuple (a, b) ('a' (Tiple[0]) will be compute for the next digit, 
+		# 'b' (Tiple[1]) is the reminder)
 
 	def baseNto10(n_input, n_base):	
 		"""This function will compute from Base-N to Base-10"""
