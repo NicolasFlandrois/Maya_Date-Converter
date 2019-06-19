@@ -22,6 +22,16 @@ class Base(object):
 	# 	b = n_input%n_base #?????
 		return a # , b # Returns a Tuple (a, b)
 
+# Class Translation():
+# Using the following computation.
+# 9.12.2.0.16 (Long Count)
+# 	9	× 144000	= 1296000
+# 	12	× 7200	= 86400
+# 	2	× 360	= 720
+# 	0	× 20	= 0
+# 	16	× 1	= 16
+# 	Total days	= 1383136
+
 #TEST
 # print("base10toN")
 # print("Base 20: ", Base.base10toN(50, 20))
