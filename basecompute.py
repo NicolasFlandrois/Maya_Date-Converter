@@ -1,6 +1,7 @@
 class Base(object):
-	"""Base class group functions to compute a number from base 10 
-	to n-base"""
+	"""Base class group functions to compute a number from base 10
+	to n-base. As needed for a Mayan Long Count, the output will still be
+	displayed using arabic numbers 0-9 (No Letters as number here)."""
 		
 	def base10toN(n_input, n_base):
 		"""This function will compute from Base-10 to Base-N"""
