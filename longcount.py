@@ -6,7 +6,7 @@
 from datecompute import Convert
 from basecompute import Base
 
-class longcount(object):
+class Longcount(object):
     """We are managing here all Mayan Long Count computations."""
         
     def mayanlc(date):
