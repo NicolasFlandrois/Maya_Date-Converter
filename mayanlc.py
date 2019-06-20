@@ -3,33 +3,33 @@
 # Date: Thu 20 Jun 2019 13:00:45 CEST 
 # Author: Nicolas Flandrois
 
-import os 
-import platform
-import datetime
-from datecompute import Convert
-from basecompute import Base
-from longcount import Longcount
-
-def clean():
-    """This function will clear the terminal's screen. The command is 
-    automaticaly detected according to the system OS you run it."""
-    print("(Appuyez sur Entrer pour continuer)")
-    input()
-    if platform.system() == "Windows":
-        os.system("cls")
-    else:
-        os.system("clear") #This command will work on Linux and OSx systems.
+from engine import Engine
 
 def main():
     """Main running function."""
 
-    d = datetime.datetime.now()
-    t = d.timetuple()
+    Engine.mlcnow()
 
-    ed_display = d.strftime('%A, %Y %B %d. %H:%M:%S')
-    print('Today\'s date : ', ed_display)
-    Longcount.mayanlc_display(Longcount.mayanlc(Convert.nowdate()))
-
+    while True:
+        responce = str(Engine.menu())
+        if responce == 'q':
+            # Quit program.
+            break
+        elif responce == '1':
+            # Convert Date to MLC.  
+            Engine.mlcnow()
+            pass
+        elif responce == '2':
+            # Convert Date to MLC.  
+            Engine.date2mlc()
+            pass
+        elif responce == '3':
+            # Translate MLC to Date.
+            Engine.mlc2date()
+            pass
+        else:
+            print("We couldn't understand your choice. Please try again.")
+            pass
 
 
 if __name__ == '__main__':

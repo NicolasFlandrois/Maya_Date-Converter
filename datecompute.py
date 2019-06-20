@@ -39,13 +39,3 @@ class Convert(object):
             # Decimal (base 10) value of maya long count's ref point
         delta = datetime.timedelta(days=(lcdecimal - ref_b))
         return ref_a + delta
-
-# Test
-# print("Computing Today's date Automaticaly")
-# print("Auto Dating Now: ", Convert.nowdate())
-# print("Converting the date: ", Convert.convertor(Convert.nowdate()))
-# print("Computing an Input Date")
-# print("Formating the date : ", Convert.inputdate(1970, 7, 2))
-# print("Converting the date : ", Convert.convertor(
-#     Convert.inputdate(1970, 7, 2)))
-# print(Convert.date_translator(1874372))

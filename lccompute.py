@@ -57,9 +57,9 @@ class Longcount(object):
         """Printing a Display of the Mayan Long Count, from dictionary:
         mlc = {"kin":0, "winal":0, "tun":0, "katun":0, "baktun":0, "piktun":0,
                "kalabtun":0, "kinchiltun":0, "alautun":0, "alautun_rest":0}"""
-        print(f'{mlc["alautun_rest"]}.{mlc["alautun"]}.{mlc["kinchiltun"]}.\
-    {mlc["kalabtun"]}.{mlc["piktun"]}.{mlc["baktun"]}.{mlc["katun"]}.\
-    {mlc["tun"]}.{mlc["winal"]}.{mlc["kin"]}')
+        return f'{mlc["alautun_rest"]}.{mlc["alautun"]}.{mlc["kinchiltun"]}.\
+{mlc["kalabtun"]}.{mlc["piktun"]}.{mlc["baktun"]}.{mlc["katun"]}.\
+{mlc["tun"]}.{mlc["winal"]}.{mlc["kin"]}'
 
     def mayanlc_input():
         """The User will be asked for the Mayan LC date in a certain format.
@@ -98,23 +98,3 @@ tun . winal . kin)\n"))
                 print("The value you entered isn't valid.")
 
         return mlc
-
-# TEST
-# print("Mayan Date Now : ")
-# print(Convert.nowdate())
-# mayanlc_display(mayanlc(Convert.nowdate()))
-# print("\nConverting an input date to MLC: (1960-01-02)")
-# mayanlc_display(mayanlc(Convert.inputdate(1960, 1, 2)))
-# print(mayanlc_input())
-# print(Convert.date_translator(Base.mlctobase10(mayanlc_input())))
-
-# ToDo:
-# [X] Appending a dictionary to store the Mayan Date
-# [X] Translating the Mayan Date Back into a date
-# [ ] Managing the convertions into 2 commands:
-#                [ ] Auto Converting Today's date into a Mayan Long Count.
-#                       > automayalc() function
-#                [ ] Converting a Manually input date into Mayan LC.
-#                       > convertmayalc() function
-#                [ ] Translating a Manually input Mayan LC into a data.
-#                       > translatemayalc() function

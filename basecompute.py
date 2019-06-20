@@ -45,30 +45,3 @@ class Base(object):
 
         return int(kin + winal + tun + katun + baktun + piktun + kalabtun +\
                kinchiltun + alautun + alautun_rest)
-
-
-#TEST
-# print("base10toN")
-# print("Base 20: ", Base.base10toN(50, 20))
-# print("Base 18: ", Base.base10toN(50, 18))
-# print("baseNto10")
-# print("Base 20: ", Base.baseNto10(60, 20))
-# print("Base 18: ", Base.baseNto10(40, 18))
-
-# mlc = {"kin":12, "winal":10, "tun":6, "katun":0, "baktun":13, "piktun":0,
-#            "kalabtun":0, "kinchiltun":0, "alautun":0, "alautun_rest":0}
-
-# kin = mlc["kin"]
-# winal = mlc["winal"]
-# tun = mlc["tun"]
-# katun = mlc["katun"]
-# baktun = mlc["baktun"]
-# piktun = mlc["piktun"]
-# kalabtun = mlc["kalabtun"]
-# kinchiltun = mlc["kinchiltun"]
-# alautun = mlc["alautun"]
-# alautun_rest = mlc["alautun_rest"]
-
-# print(f"Mayan LC {alautun_rest}.{alautun}.{kinchiltun}.{kalabtun}.{piktun}.\
-# {baktun}.{katun}.{tun}.{winal}.{kin}\n\
-# Decimal Value is : ", Base.mlctobase10(mlc))
