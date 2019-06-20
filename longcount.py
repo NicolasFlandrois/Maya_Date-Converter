@@ -46,8 +46,12 @@ kinchiltun = Base.base10toN(kalabtun_rest, 20)[1]
 kinchiltun_rest = Base.base10toN(kalabtun_rest, 20)[0]
 # print(kinchiltun)
 
-print(f'{kinchiltun}.{kalabtun}.{piktun}.{baktun}.{katun}.{tun}.{winal}.\
-{kin}')
+# 20 Alautun
+alautun = Base.base10toN(kinchiltun_rest, 20)[1]
+alautun_rest = Base.base10toN(kinchiltun_rest, 20)[0]
+
+print(f'{alautun}.{kinchiltun}.{kalabtun}.{piktun}.{baktun}.{katun}.{tun}.\
+{winal}.{kin}')
 
 # ToDo:
 # [ ] Appending a dictionary to store the Mayan Date
