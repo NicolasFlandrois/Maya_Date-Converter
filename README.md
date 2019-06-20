@@ -1,26 +1,31 @@
 # maya_date
 ## Python script to compute, convert, and translate dates into Mayan Calendar Long Count date.
-==============
 
+--------------
 ### Mayan Calendar Project :
-	* Generate Mayan Long Count Calendar according to current time. Changing reference date.
-	* Convert an input date (from gregorian ISO-8601 calendar) to Long Count.
-	* Translate a Long Count Input, into a Gregorian date (ISO-8601 calendar).
+- Generate Mayan Long Count Calendar according to current time. Changing reference date.
+- Convert an input date (from gregorian ISO-8601 calendar) to Long Count.
+- Translate a Long Count Input, into a Gregorian date (ISO-8601 calendar).
 
 ### Tzolkin Ha'ab Project :
-	* Same 2 generator, convertor, translator, for Tzolkin and Ha'ab Mayan Calendar. Which is more difficult, as they are cycles, and don't refer to a year.
+- Same 2 generator, convertor, translator, for Tzolkin and Ha'ab Mayan Calendar. Which is more difficult, as they are cycles, and don't refer to a year.
 		- Generator for Today's date (now)
 		- Convert a Date to Tzolkin/Ha'ab
 		- Translate from Tzolkin/Ha'ab to Date (If possible)
 
 --------------
-
-By Launching the program in Python (Python 3.7 and above), the current Date and Long Count are displaid. Then, by pressing 'Enter', the menu is displaid:
+## Description:
+By Launching the program named 'mayan_date.py', the current Date and Long Count are displaid. Then, by pressing 'Enter', the menu is displaid:
 
 + Long Count Now (Today's date) Automatic
 + Convert a Date to Long Count
 + Translate a Long Count to Date
 + Quit
+
+--------------
+## Requirements:
+* Python 3.7 and above.
+* No other requirements, all modules are part of Python's standard Library.
 
 --------------
 ## Remaining issues and To Do List:
