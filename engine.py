@@ -76,7 +76,7 @@ press:\n\
         print('Today\'s date : ', ed_display)
         print('Today\'s Mayan Long Count : ',
               Longcount.mayanlc_display(Longcount.mayanlc(Convert.nowdate())))
-        input('\n\n    (Press any key to continue)\n\n')
+        input('\n\n    (Press ENTER to continue)\n\n')
         Engine.clean()
 
     def date2mlc():
@@ -103,7 +103,7 @@ press:\n\
                                                     dlist[0],
                                                     dlist[1],
                                                     dlist[2]))))
-        input('\n\n    (Press any key to continue)\n\n')
+        input('\n\n    (Press ENTER to continue)\n\n')
         Engine.clean()
 
     def mlc2date():
@@ -114,5 +114,5 @@ press:\n\
         
         print(f'\nThis Mayan Long Count corrresponds to the date:\n\n\
                {date_display}.')
-        input('\n\n    (Press any key to continue)\n\n')
+        input('\n\n    (Press ENTER to continue)\n\n')
         Engine.clean()
