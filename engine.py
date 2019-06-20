@@ -64,7 +64,7 @@ press:\n\
                 else:
                     raise          
             except:
-                print("Your Choice isn't valid.")
+                print("Your Choice is not valid.")
 
     def mlcnow():
         """Output Today's date into MLC"""
@@ -76,7 +76,7 @@ press:\n\
         print('Today\'s date : ', ed_display)
         print('Today\'s Mayan Long Count : ',
               Longcount.mayanlc_display(Longcount.mayanlc(Convert.nowdate())))
-        input('\n\n (Press any key to continue)\n\n')
+        input('\n\n    (Press any key to continue)\n\n')
         Engine.clean()
 
     def date2mlc():
@@ -103,14 +103,16 @@ press:\n\
                                                     dlist[0],
                                                     dlist[1],
                                                     dlist[2]))))
-        input('\n\n (Press any key to continue)\n\n')
+        input('\n\n    (Press any key to continue)\n\n')
         Engine.clean()
 
     def mlc2date():
         """Translate MLC to Date"""
-        print('This Mayan Long Count corrresponds to the date:\n',
-            Convert.date_translator(Base.mlctobase10(
-                Longcount.mayanlc_input())),
-            '\n(Format yyyy/mm/dd)')
-        input('\n\n (Press any key to continue)\n\n')
+        date = Convert.date_translator(Base.mlctobase10(Longcount.mayanlc_input()))
+
+        date_display = date.strftime('%A, %Y %B %d')
+        
+        print(f'\nThis Mayan Long Count corrresponds to the date:\n\n\
+               {date_display}.')
+        input('\n\n    (Press any key to continue)\n\n')
         Engine.clean()
