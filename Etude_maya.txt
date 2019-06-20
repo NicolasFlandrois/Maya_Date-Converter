@@ -209,3 +209,21 @@ Therefore, 3,789 complete Haab' have passed and the remainder 134 is the 135th d
 Find which month the day is in. Dividing the remainder 134 by 20, is six complete months and a remainder of 14, indicating the 15th day. So, the date in the Haab' lies in the seventh month, which is Yaxk'in. The fifteenth day of Yaxk'in is 14, thus the Haab' date is 14 Yaxk'in.
 
 So the date of the long count date 9.12.2.0.16 5 Kib' 14 Yaxk'in is confirmed.
+------------------------------
+http://mayan-calendar.com/ancient_longcount.html
+--------------------------------------------------
+Personnal Note:
+
+Archeologist (and mathematicians) pin pointed 2 "Correlation Number".
+Correlation number is Mayan's reference point, to which the calculate Year 0, or (so they thought) corresponding to the creation of the world.
+
+	584283
+	584285
+
+This is not (not really) a discordence between archeologists, but rather a misscalculation from the Mayan (Mesoamericans) at some point. For which we can find traces of both dates counts archeologicaly.
+
+More commonly in use by Long Count Calendar afictionados : 584283
+
+Personaly, I've been using 584283 for years, therefore this script will take 584283 as correlation point.
+
+However, for those prefering correlation number 584285, it is just a 2 days delta to modify in the script.
