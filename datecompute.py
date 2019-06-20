@@ -29,12 +29,8 @@ class Convert(object):
             # Then convert this decimal into base(20)
         return ref_b + delta.days
 
-class DateTranslator(object):
-    """Translator translates a long count decimal number (integer) 
-    into a Date."""
-
     def date_translator(lcdecimal:int):
-        """From a Long Count Decimal Integer (lcdecimal:int),
+        """Translator from a Long Count Decimal Integer (lcdecimal:int),
         this function will translate it into a date object."""
         ref_a = datetime.date(1970, 1, 1) 
             # Choosen as ref point, as this date is Unix Time = 0
@@ -52,4 +48,4 @@ class DateTranslator(object):
 # print("Formating the date : ", Convert.inputdate(1970, 7, 2))
 # print("Converting the date : ", Convert.convertor(
 #     Convert.inputdate(1970, 7, 2)))
-# print(DateTranslator.date_translator(1874372))
+# print(Convert.date_translator(1874372))
