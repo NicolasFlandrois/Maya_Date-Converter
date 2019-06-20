@@ -5,9 +5,10 @@
 
 import os 
 import platform
+import datetime
 from datecompute import Convert
 from basecompute import Base
-from loncount import Longcount
+from longcount import Longcount
 
 def clean():
     """This function will clear the terminal's screen. The command is 
@@ -21,6 +22,14 @@ def clean():
 
 def main():
     """Main running function."""
+
+    d = datetime.datetime.now()
+    t = d.timetuple()
+
+    ed_display = d.strftime('%A, %Y %B %d. %H:%M:%S')
+    print('Today\'s date : ', ed_display)
+    Longcount.mayanlc_display(Longcount.mayanlc(Convert.nowdate()))
+
 
 
 if __name__ == '__main__':

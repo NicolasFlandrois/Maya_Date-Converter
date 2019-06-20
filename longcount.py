@@ -70,9 +70,9 @@ class Longcount(object):
 
         while True:
             mlcstr = str(input("Please input the Mayan Long Count date.\n\
-    Format to Use: 0.0.0.0.0.13.0.6.10.12\n\
-    (alautun_rest . alautun . kinchiltun . kalabtun . piktun . baktun . katun . \
-    tun . winal . kin)\n"))
+Format to Use: 0.0.0.0.0.13.0.6.10.12\n\
+(alautun_rest . alautun . kinchiltun . kalabtun . piktun . baktun . katun . \
+tun . winal . kin)\n"))
 
             res = [int(i) for i in mlcstr.replace(".", " ").split()
                    if i.isdigit()]
