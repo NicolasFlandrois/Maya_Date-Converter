@@ -9,9 +9,9 @@
 
 ### Tzolkin Ha'ab Project :
 - Same 2 generator, convertor, translator, for Tzolkin and Ha'ab Mayan Calendar. Which is more difficult, as they are cycles, and don't refer to a year.
-		- Generator for Today's date (now)
-		- Convert a Date to Tzolkin/Ha'ab
-		- Translate from Tzolkin/Ha'ab to Date (If possible)
+	- Generator for Today's date (now)
+	- Convert a Date to Tzolkin/Ha'ab
+	- Translate from Tzolkin/Ha'ab to Date (If possible)
 
 --------------
 ## Description:
