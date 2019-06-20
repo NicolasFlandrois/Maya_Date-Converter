@@ -43,8 +43,8 @@ class Base(object):
         alautun = mlc["alautun"]*23040000000
         alautun_rest = mlc["alautun_rest"]*460800000000
 
-        return kin + winal + tun + katun + baktun + piktun + kalabtun +\
-               kinchiltun + alautun + alautun_rest
+        return int(kin + winal + tun + katun + baktun + piktun + kalabtun +\
+               kinchiltun + alautun + alautun_rest)
 
 
 #TEST

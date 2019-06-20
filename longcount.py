@@ -105,10 +105,11 @@ tun . winal . kin)\n"))
 # print("\nConverting an input date to MLC: (1960-01-02)")
 # mayanlc_display(mayanlc(Convert.inputdate(1960, 1, 2)))
 # print(mayanlc_input())
+# print(Convert.date_translator(Base.mlctobase10(mayanlc_input())))
 
 # ToDo:
 # [X] Appending a dictionary to store the Mayan Date
-# [ ] Translating the Mayan Date Back into a date
+# [X] Translating the Mayan Date Back into a date
 # [ ] Managing the convertions into 2 commands:
 #                [ ] Auto Converting Today's date into a Mayan Long Count.
 #                       > automayalc() function
