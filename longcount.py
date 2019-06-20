@@ -6,55 +6,60 @@
 from datecompute import Convert
 from basecompute import Base
 
-# 20 K'in
-kin = Base.base10toN(Convert.convertor(Convert.nowdate()), 20)[1]
-kin_rest = Base.base10toN(Convert.convertor(Convert.nowdate()), 20)[0]
-# print(kin)
+def mayanlc(date):
+	"""Display of the Mayan Long Count"""
+	mlc = {"kin":0, "winal":0, "tun":0, "katun":0, "baktun":0, "piktun":0,
+		   "kalabtun":0, "kinchiltun":0, "alautun":0, "alautun_rest":0}
 
-# 18 Winal
-winal = Base.base10toN(kin_rest, 18)[1]
-winal_rest = Base.base10toN(kin_rest, 18)[0]
-# print(winal)
+	# 20 K'in
+	mlc["kin"] = Base.base10toN(Convert.convertor(date), 20)[1]
+	kin_rest = Base.base10toN(Convert.convertor(date), 20)[0]
 
-# 20 Tun
-tun = Base.base10toN(winal_rest, 20)[1]
-tun_rest = Base.base10toN(winal_rest, 20)[0]
-# print(tun)
+	# 18 Winal
+	mlc["winal"] = Base.base10toN(kin_rest, 18)[1]
+	winal_rest = Base.base10toN(kin_rest, 18)[0]
 
-# 20 K'atun
-katun = Base.base10toN(tun_rest, 20)[1]
-katun_rest = Base.base10toN(tun_rest, 20)[0]
-# print(katun)
+	# 20 Tun
+	mlc["tun"] = Base.base10toN(winal_rest, 20)[1]
+	tun_rest = Base.base10toN(winal_rest, 20)[0]
 
-# 20 B'ak'tun
-baktun = Base.base10toN(katun_rest, 20)[1]
-baktun_rest = Base.base10toN(katun_rest, 20)[0]
-# print(baktun)
+	# 20 K'atun
+	mlc["katun"] = Base.base10toN(tun_rest, 20)[1]
+	katun_rest = Base.base10toN(tun_rest, 20)[0]
 
-# 20 Piktun
-piktun = Base.base10toN(baktun_rest, 20)[1]
-piktun_rest = Base.base10toN(baktun_rest, 20)[0]
-# print(piktun)
+	# 20 B'ak'tun
+	mlc["baktun"] = Base.base10toN(katun_rest, 20)[1]
+	baktun_rest = Base.base10toN(katun_rest, 20)[0]
 
-# 20 Kalabtun
-kalabtun = Base.base10toN(piktun_rest, 20)[1]
-kalabtun_rest = Base.base10toN(piktun_rest, 20)[0]
-# print(kalabtun)
+	# 20 Piktun
+	mlc["piktun"] = Base.base10toN(baktun_rest, 20)[1]
+	piktun_rest = Base.base10toN(baktun_rest, 20)[0]
 
-# 20 K'inchiltun
-kinchiltun = Base.base10toN(kalabtun_rest, 20)[1]
-kinchiltun_rest = Base.base10toN(kalabtun_rest, 20)[0]
-# print(kinchiltun)
+	# 20 Kalabtun
+	mlc["kalabtun"] = Base.base10toN(piktun_rest, 20)[1]
+	kalabtun_rest = Base.base10toN(piktun_rest, 20)[0]
 
-# 20 Alautun
-alautun = Base.base10toN(kinchiltun_rest, 20)[1]
-alautun_rest = Base.base10toN(kinchiltun_rest, 20)[0]
+	# 20 K'inchiltun
+	mlc["kinchiltun"] = Base.base10toN(kalabtun_rest, 20)[1]
+	kinchiltun_rest = Base.base10toN(kalabtun_rest, 20)[0]
 
-print(f'{alautun}.{kinchiltun}.{kalabtun}.{piktun}.{baktun}.{katun}.{tun}.\
-{winal}.{kin}')
+	# 20 Alautun
+	mlc["alautun"] = Base.base10toN(kinchiltun_rest, 20)[1]
+	mlc["alautun_rest"] = Base.base10toN(kinchiltun_rest, 20)[0]
+
+	return f'{mlc["alautun_rest"]}.{mlc["alautun"]}.{mlc["kinchiltun"]}.\
+{mlc["kalabtun"]}.{mlc["piktun"]}.{mlc["baktun"]}.{mlc["katun"]}.\
+{mlc["tun"]}.{mlc["winal"]}.{mlc["kin"]}'
+
+# TEST
+print("Mayan Date Now : ")
+print(Convert.nowdate())
+print(mayanlc(Convert.nowdate()))
+print("\nConverting an input date to MLC: (1960-01-02)")
+print(mayanlc(Convert.inputdate(1960, 1, 2)))
 
 # ToDo:
-# [ ] Appending a dictionary to store the Mayan Date
+# [X] Appending a dictionary to store the Mayan Date
 # [ ] Translating the Mayan Date Back into a date
 # [ ] Managing the convertions into 2 commands:
 #                [ ] Auto Converting Today's date into a Mayan Long Count.
