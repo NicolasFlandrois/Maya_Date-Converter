@@ -1,4 +1,4 @@
-#!usr/bin/python3.7
+#!/usr/bin/python3.7
 # UTF8
 # Date: Thu 20 Jun 2019 13:00:45 CEST 
 # Author: Nicolas Flandrois
@@ -97,12 +97,7 @@ press:\n\
         date_display = d.strftime('%A, %Y %B %d')
 
         Engine.clean()
-        print(f'{date_display}, corrresponds to the Mayan Long Count:\n\n\
-               ',
-        Longcount.mayanlc_display(Longcount.mayanlc(Convert.inputdate(
-                                                    dlist[0],
-                                                    dlist[1],
-                                                    dlist[2]))))
+        print(f'{date_display}, corrresponds to the Mayan Long Count:\n\n', Longcount.mayanlc_display(Longcount.mayanlc(Convert.inputdate(dlist[0], dlist[1], dlist[2]))))
         input('\n\n    (Press ENTER to continue)\n\n')
         Engine.clean()
 
