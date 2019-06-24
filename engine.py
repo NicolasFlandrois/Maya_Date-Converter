@@ -16,22 +16,16 @@ class Engine(object):
     user friendly view."""
 
     def clean():
-        """This function will clear the terminal's screen. The command is 
-        automaticaly detected according to the system OS you run it."""
-        if platform.system() == "Windows":
-            os.system("cls")
-        else:
-            os.system("clear") 
-            #This command will work on Linux and OSx systems.
+        """
+        This function will clear the terminal's screen. The command is 
+        automaticaly detected according to the system OS you run it.
+        Compatible with Windows, OSx, and Linux.
+        """
+        os.system("cls" if platform.system() == "Windows" else "clear")
 
     def ask_integer(message:str, range, error_message:str = ""):
         """
-        Le but de cette fonction
-        est de demander un entier à l'utilisateur
-        avec un message personnalisé
-        Répéter l'opération si l'entrée n'est pas un entier
-        avec un message d'erreur personnalisé
-        L'entier sera vérifié par la fonction passée en paramètres
+        This function's purpose is to ask and verify an Integer.
         """
         var = None
         while True:
