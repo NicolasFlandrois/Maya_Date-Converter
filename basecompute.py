@@ -3,21 +3,22 @@
 # Date: Wed 19 Jun 2019 15:28:22 CEST
 # Author: Nicolas Flandrois
 
+
 class Base(object):
     """Base class group functions to compute a number from base 10
     to n-base. As needed for a Mayan Long Count, the output will still be
     displayed using arabic numbers 0-9 (No Letters as number here)."""
-        
+
     def base10toN(n_input, n_base):
         """This function will compute from Base-10 to Base-N"""
         a = n_input//n_base
-        b = n_input%n_base
-        return a, b 
+        b = n_input % n_base
+        return a, b
         # Returns a Tuple (a, b) ('a' (Tiple[0]) will be compute for the next
         # digit, 'b' (Tiple[1]) is the reminder)
 
-    def mlctobase10(mlc:dict):
-        """This functions to compute a MayanLC dictionary, to a MayanLC 
+    def mlctobase10(mlc: dict):
+        """This functions to compute a MayanLC dictionary, to a MayanLC
         Decimal Integer.
 
         mlc = {"kin":0, "winal":0, "tun":0, "katun":0, "baktun":0, "piktun":0,
@@ -43,5 +44,5 @@ class Base(object):
         alautun = mlc["alautun"]*23040000000
         alautun_rest = mlc["alautun_rest"]*460800000000
 
-        return int(kin + winal + tun + katun + baktun + piktun + kalabtun +\
-               kinchiltun + alautun + alautun_rest)
+        return int(kin + winal + tun + katun + baktun + piktun + kalabtun +
+                   kinchiltun + alautun + alautun_rest)

@@ -1,9 +1,9 @@
 #!/usr/bin/python3.7
 # UTF8
-# Date: Thu 20 Jun 2019 13:00:45 CEST 
+# Date: Thu 20 Jun 2019 13:00:45 CEST
 # Author: Nicolas Flandrois
 
-import os 
+import os
 import platform
 import datetime
 from datecompute import Convert
@@ -17,13 +17,13 @@ class Engine(object):
 
     def clean():
         """
-        This function will clear the terminal's screen. The command is 
+        This function will clear the terminal's screen. The command is
         automaticaly detected according to the system OS you run it.
         Compatible with Windows, OSx, and Linux.
         """
         os.system("cls" if platform.system() == "Windows" else "clear")
 
-    def ask_integer(message:str, range, error_message:str = ""):
+    def ask_integer(message: str, range, error_message: str = ""):
         """
         This function's purpose is to ask and verify an Integer.
         """
@@ -34,10 +34,10 @@ class Engine(object):
                 if var in range:
                     return var
                     raise
-                    
+
             except KeyboardInterrupt:
                 break
-                
+
             except:
                 print(error_message)
 
@@ -66,12 +66,12 @@ press:\n\
                         break
                     elif responce.strip().lower() == '1':
                         Engine.clean()
-                        # Convert Date to MLC. 
+                        # Convert Date to MLC.
                         Engine.mlcnow()
                         print('\n')
                     elif responce.strip().lower() == '2':
                         Engine.clean()
-                        # Convert Date to MLC.  
+                        # Convert Date to MLC.
                         Engine.date2mlc()
                         print('\n')
                     elif responce.strip().lower() == '3':
@@ -82,7 +82,7 @@ press:\n\
                     else:
                         raise
                 else:
-                    raise          
+                    raise
             except:
                 print("We couldn't understand your choice. Please try again.")
 
@@ -101,23 +101,24 @@ press:\n\
         """Display & Convert Date to MLC."""
         dlist = []
         dlist.append(Engine.ask_integer("Year? (YYYY format) ",
-                                     range(-10000000, 10000000)))
-        # Issue here, Years <1000 raise an Error Message. 
+                                        range(-10000000, 10000000)))
+        # Issue here, Years <1000 raise an Error Message.
         # Due to datetime modules' limitations.
         # Create here a Try/Except Methode to rule out this kind of error.
         dlist.append(Engine.ask_integer("Month? (from 01 to 12) ",
-            range(1, 13)))
+                                        range(1, 13)))
         dlist.append(Engine.ask_integer("Day of the month? (from 01 to 31) ",
-                                 range(1, 32)))
+                                        range(1, 32)))
 
         dstring = " ".join([str(i) for i in dlist])
-        d = datetime.datetime.strptime(dstring, '%Y %m %d') 
+        d = datetime.datetime.strptime(dstring, '%Y %m %d')
         date_display = d.strftime('%A, %Y %B %d')
 
         Engine.clean()
         print(f'{date_display}, corrresponds to the Mayan Long Count:\n\n',
-            Longcount.mayanlc_display(Longcount.mayanlc(
-                Convert.inputdate(dlist[0], dlist[1], dlist[2]))))
+              Longcount.mayanlc_display(Longcount.mayanlc(
+                                        Convert.inputdate(
+                                            dlist[0], dlist[1], dlist[2]))))
 
     def mlc2date():
         """Display & Translate MLC to Date"""
@@ -125,6 +126,6 @@ press:\n\
             Base.mlctobase10(Longcount.mayanlc_input()))
 
         date_display = date.strftime('%A, %Y %B %d')
-        
+
         print(f'\nThis Mayan Long Count corrresponds to the date:\n\n\
                {date_display}.')
