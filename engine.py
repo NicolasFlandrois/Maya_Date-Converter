@@ -42,39 +42,63 @@ class Engine(object):
                 print(error_message)
 
     def menu():
+        Engine.clean()
+        print("Mayan Long Count Calendar.\n")
+        Engine.mlcnow()
+        print('\n')
         while True:
-            responce = input("MAYAN LONG COUNT CALENDAR\n\
-Do you want to do some other operation?\n\
+            responce = input("Do you want to do some other MLC operation?\n\
 press:\n\
-        1 - Compute Today\'s Mayan Long Count.\n\
-        2 - To convert a Date into a Mayan Long Count.\n\
-        3 - To Translate a Mayan Long Count into a Date.\n\
-        Q - To Quit.\n")
+        1 : Compute Today\'s Mayan Long Count.\n\
+        2 : To Convert a Date into a Mayan Long Count.\n\
+        3 : To Translate a Mayan Long Count into a Date.\n\
+        R : Return to main menu.\n\
+        Q : To Quit.\n\n")
             Engine.clean()
 
             try:
-                if responce.strip().lower() in ['q', '1', '2', '3']:
-                    return responce
+                if responce.strip().lower() in ['r', 'q', '1', '2', '3']:
+                    if responce.strip().lower() == 'r':
+                        # Return to main menu.
+                        continue
+                    elif responce.strip().lower() == 'q':
+                        # Quit program.
+                        break
+                    elif responce.strip().lower() == '1':
+                        Engine.clean()
+                        # Convert Date to MLC. 
+                        Engine.mlcnow()
+                        print('\n')
+                    elif responce.strip().lower() == '2':
+                        Engine.clean()
+                        # Convert Date to MLC.  
+                        Engine.date2mlc()
+                        print('\n')
+                    elif responce.strip().lower() == '3':
+                        Engine.clean()
+                        # Translate MLC to Date.
+                        Engine.mlc2date()
+                        print('\n')
+                    else:
+                        raise
                 else:
                     raise          
             except:
-                print("Your Choice is not valid.")
+                print("We couldn't understand your choice. Please try again.")
 
     def mlcnow():
-        """Output Today's date into MLC"""
+        """Display & Compute Today's date into MLC"""
         d = datetime.datetime.now()
         t = d.timetuple()
 
         ed_display = d.strftime('%A, %Y %B %d. %H:%M:%S')
 
-        print('Today\'s date : ', ed_display)
-        print('Today\'s Mayan Long Count : ',
+        print('Today\'s date :                 ', ed_display)
+        print('\nToday\'s Mayan Long Count :     ',
               Longcount.mayanlc_display(Longcount.mayanlc(Convert.nowdate())))
-        input('\n\n    (Press ENTER to continue)\n\n')
-        Engine.clean()
 
     def date2mlc():
-        """Convert Date to MLC."""
+        """Display & Convert Date to MLC."""
         dlist = []
         dlist.append(Engine.ask_integer("Year? (YYYY format) ",
                                      range(-10000000, 10000000)))
@@ -91,17 +115,16 @@ press:\n\
         date_display = d.strftime('%A, %Y %B %d')
 
         Engine.clean()
-        print(f'{date_display}, corrresponds to the Mayan Long Count:\n\n', Longcount.mayanlc_display(Longcount.mayanlc(Convert.inputdate(dlist[0], dlist[1], dlist[2]))))
-        input('\n\n    (Press ENTER to continue)\n\n')
-        Engine.clean()
+        print(f'{date_display}, corrresponds to the Mayan Long Count:\n\n',
+            Longcount.mayanlc_display(Longcount.mayanlc(
+                Convert.inputdate(dlist[0], dlist[1], dlist[2]))))
 
     def mlc2date():
-        """Translate MLC to Date"""
-        date = Convert.date_translator(Base.mlctobase10(Longcount.mayanlc_input()))
+        """Display & Translate MLC to Date"""
+        date = Convert.date_translator(
+            Base.mlctobase10(Longcount.mayanlc_input()))
 
         date_display = date.strftime('%A, %Y %B %d')
         
         print(f'\nThis Mayan Long Count corrresponds to the date:\n\n\
                {date_display}.')
-        input('\n\n    (Press ENTER to continue)\n\n')
-        Engine.clean()

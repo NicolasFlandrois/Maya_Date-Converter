@@ -70,7 +70,7 @@ class Longcount(object):
 
         while True:
             mlcstr = str(input("Please input the Mayan Long Count date.\n\
-Format to Use: 0.0.0.0.0.13.0.6.10.12\n\n"))
+(Format to Use: 0.0.0.0.0.13.0.6.10.12)\n\n"))
 
             res = [int(i) for i in mlcstr.replace(".", " ").split()
                    if i.isdigit()]
